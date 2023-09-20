@@ -1,0 +1,48 @@
+<div class="py-12 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="lg:text-center">
+			<h2 class="text-base text-red-600 font-extrabold tracking-wide uppercase">Today's Workout</h2>
+			
+		</div>
+		<table class="min-w-full divide-y divide-gray-200 border-collapse border border-slate-400">
+			<thead class="bg-gray-50">
+				<tr>
+					<th  scope= "col" class=" px-6 py-3 text-left text-gray-500 uppercase tracking-wider">Lift</th>
+				
+					<th  scope= "col" class=" px-6 py-3 text-left text-gray-500 uppercase tracking-wider">Sets</th>
+				
+					<th  scope= "col" class=" px-6 py-3 text-left text-gray-500 uppercase tracking-wider">Reps</th>
+				</tr>
+			</thead>
+			<tbody class="bg-white divide-y divide-gray-200 table-auto">
+				
+				<% @daily_workout.lifts.each do |lift|%>
+				<tr>
+					<br>
+					<td class="px-6 py-4 whitespace-nowrap">
+						<div>
+							<h2 class="px-6 py-4 whitespace-nowrap">
+								<%= lift.name%>
+							</h2>
+						</div>
+					</td>
+					<td class="px-6 py-4 whitespace-nowrap">
+						<div>
+							<h2 class="px-6 py-4 whitespace-nowrap">
+								<%= lift.sets%>
+							</h2>
+						</div>
+					</td>
+					<td class="px-6 py-4 whitespace-nowrap">
+						<div>
+							<h2 class="px-6 py-4 whitespace-nowrap">
+								<%= lift.reps%>
+							</h2>
+						</div>
+					</td>
+				</tr>
+				<%end%>
+			</tbody>
+		</table>
+	</div>
+</div>
